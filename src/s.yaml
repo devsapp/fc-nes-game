@@ -1,0 +1,38 @@
+# 函数计算FC组件文档参考地址：https://github.com/devsapp/fc
+edition: 1.0.0          #  命令行YAML规范版本，遵循语义化版本（Semantic Versioning）规范
+name: myFCGame          #  项目名称
+access: '{{access}}'    #  秘钥别名
+
+services:
+  myFCGame: #  服务名称
+    component: devsapp/fc  # 组件名称
+    props: #  组件的属性值
+      region: cn-hangzhou
+      service:
+        name: my-fc-game-service
+        description: 'this is a fc game'
+      function:
+        name: my-fc-game-function
+        description: this is a fc game
+        runtime: python3
+        codeUri: ./
+        handler: index.app
+        memorySize: 128
+        timeout: 60
+        environmentVariables:
+          game: 'Alter_Ego'
+          # 此处可以选择： fighter_f8000 / Alter_Ego / croom
+      triggers:
+        - name: httpTrigger
+          type: http
+          config:
+            authType: anonymous
+            methods:
+              - GET
+      customDomains:
+        - domainName: auto
+          protocol: HTTP
+          routeConfigs:
+            - path: /*
+              methods:
+                - GET

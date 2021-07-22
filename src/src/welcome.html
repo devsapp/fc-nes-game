@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Serverless Devs 暑假陪你玩</title>
+    <script type="text/javascript" src="js/jquery-1.8.0.js"></script>
+    <script type="text/javascript" src="js/utf.js"></script>
+    <script type="text/javascript" src="js/jquery.qrcode.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            const url = window.location.href[window.location.href.length-1] == '/' ? window.location.href +  'index.html' : window.location.href +  '/index.html'
+            console.log(url)
+            $("#qrcodeCanvas").qrcode({
+                render: "canvas",    //设置渲染方式，有table和canvas，使用canvas方式渲染性能相对来说比较好
+                text: url,    //扫描二维码后显示的内容,可以直接填一个网址，扫描二维码后自动跳向该链接
+                width: "200",               //二维码的宽度
+                height: "200",              //二维码的高度
+                background: "#ffffff",       //二维码的后景色
+                foreground: "#000000",        //二维码的前景色
+            });
+        });
+    </script>
+
+</head>
+<body>
+<center>
+    <h1>Serverless Devs</h1>
+    <h2>童年的回忆，暑期不无聊</h2>
+    <div id="qrcodeCanvas"></div>
+</center>
+</body>
+</html>
