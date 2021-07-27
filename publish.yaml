@@ -1,6 +1,6 @@
 Type: Application
 Name: fc-nes-game
-Version: 0.0.2
+Version: 0.0.5
 Provider:
   - 阿里云
 Description: 一款基于基于函数计算的红白机游戏
