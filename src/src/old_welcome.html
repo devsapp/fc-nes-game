@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>授权登录页面</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--响应式框架-->
-    <link rel='stylesheet' href='https://example-static.oss-cn-beijing.aliyuncs.com/registry-login/bootstrap.min.css'>
-    <!--主要样式-->
-    <link rel="stylesheet" href="https://example-static.oss-cn-beijing.aliyuncs.com/registry-login/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Serverless Devs 暑假陪你玩</title>
     <script type="text/javascript" src="source/jquery-1.8.0.js"></script>
     <script type="text/javascript" src="source/utf.js"></script>
     <script type="text/javascript" src="source/jquery.qrcode.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            const url = window.location.href[window.location.href.length - 1] == '/' ? window.location.href + 'index.htm' : window.location.href + '/index.htm'
+            const url = window.location.href[window.location.href.length-1] == '/' ? window.location.href +  'index.html' : window.location.href +  '/index.html'
             console.log(url)
             $("#qrcodeCanvas").qrcode({
                 render: "canvas",    //设置渲染方式，有table和canvas，使用canvas方式渲染性能相对来说比较好
@@ -26,17 +21,13 @@
             });
         });
     </script>
+
 </head>
 <body>
-<div class="container">
-    <div class="card-wrap">
-        <div class="card border-0 shadow card--welcome is-show" id="welcome">
-            <div class="card-body">
-                <h2 class="card-title">童年的回忆，暑期不无聊</h2>
-                <div id="qrcodeCanvas"></div>
-            </div>
-        </div>
-    </div>
-</div>
+<center>
+    <h1>Serverless Devs</h1>
+    <h2>童年的回忆</h2><h2>暑期不无聊</h2>
+    <div id="qrcodeCanvas"></div>
+</center>
 </body>
 </html>

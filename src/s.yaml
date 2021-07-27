@@ -20,7 +20,7 @@ services:
         memorySize: 128
         timeout: 60
         environmentVariables:
-          game: 'Alter_Ego'
+          game: 'fighter_f8000'
           # 此处可以选择： fighter_f8000 / Alter_Ego / croom
       triggers:
         - name: httpTrigger

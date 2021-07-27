@@ -11,7 +11,7 @@ def getFile(n):
 def game(n):
     if os.path.exists(os.path.join('src', n)) and os.path.isfile(os.path.join('src', n)):
         if 'index.html' in n:
-            return getFile(n).decode("utf-8").replace('{{gameName}}', os.environ.get("game", 'fighter_f8000'))
+            return getFile(n).decode("utf-8").replace('{{gameName}}', os.environ.get("game", '超级玛丽1'))
         return getFile(n)
 @bottle.route('/')
 def game():
@@ -21,6 +21,6 @@ def game():
 
 
 if __name__ == '__main__':
-    bottle.run(port=8015)
+    bottle.run(port=8016)
 else:
     app = bottle.default_app()
